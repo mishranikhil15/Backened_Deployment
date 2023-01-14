@@ -17,6 +17,9 @@ app.use(cors({
 })) 
 
 app.use(express.json())
+app.get("/", (req, res) => {
+    res.send("Welcome")
+})
 app.use("/users",userrouter)
 app.use(authenticate)
 app.use("/notes",noterouter)
